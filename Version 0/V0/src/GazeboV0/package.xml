@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>GazeboV0</name>
+  <version>1.0.0</version>
+  <description>
+    <p>URDF Description package for GazeboV0</p>
+    <p>This package contains configuration data, 3D models and launch files
+for GazeboV0 robot</p>
+  </description>
+  <author>Shantnav Agarwal</author>
+  <maintainer email="shantnavautonomous@gmail.com" />
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roslaunch</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>gazebo</depend>
+  <export>
+    <architecture_independent />
+  </export>
+</package>

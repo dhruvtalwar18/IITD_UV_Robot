@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="GazeboV0">
+  <link
+    name="Chassis">
+    <inertial>
+      <origin
+        xyz="-0.043917 -0.52949 -0.0017265"
+        rpy="0 0 0" />
+      <mass
+        value="25.478" />
+      <inertia
+        ixx="3.1305"
+        ixy="-0.040722"
+        ixz="-1.4486E-06"
+        iyy="0.22262"
+        iyz="-7.6694E-05"
+        izz="3.184" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/Chassis.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.12549 0.38823 0.60784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/Chassis.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="RightWheel">
+    <inertial>
+      <origin
+        xyz="1.3878E-16 6.9389E-18 0.0051"
+        rpy="0 0 0" />
+      <mass
+        value="0.33861" />
+      <inertia
+        ixx="0.00034758"
+        ixy="-1.4714E-23"
+        ixz="9.685E-18"
+        iyy="0.00034758"
+        iyz="4.2157E-19"
+        izz="0.00068952" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/RightWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92941 0.33333 0.23137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/RightWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RightRevolute"
+    type="continuous">
+    <origin
+      xyz="-0.046488 0.13117 -0.19103"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="Chassis" />
+    <child
+      link="RightWheel" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="LeftWheel">
+    <inertial>
+      <origin
+        xyz="-8.3267E-17 0 -0.0051"
+        rpy="0 0 0" />
+      <mass
+        value="0.33861" />
+      <inertia
+        ixx="0.00034758"
+        ixy="0"
+        ixz="5.1865E-18"
+        iyy="0.00034758"
+        iyz="2.0943E-18"
+        izz="0.00068952" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/LeftWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.92941 0.33333 0.23137 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/LeftWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LeftRevolute"
+    type="continuous">
+    <origin
+      xyz="-0.046488 0.13117 0.18817"
+      rpy="-3.1416 0 0.4158" />
+    <parent
+      link="Chassis" />
+    <child
+      link="LeftWheel" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="FrontCastor">
+    <inertial>
+      <origin
+        xyz="0.0030314 0.034563 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.067153" />
+      <inertia
+        ixx="4.4926E-05"
+        ixy="-6.705E-06"
+        ixz="5.639E-21"
+        iyy="9.6191E-06"
+        iyz="1.5764E-20"
+        izz="4.9799E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/FrontCastor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.23529 0.68235 0.63921 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/FrontCastor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontCastorRevolute"
+    type="continuous">
+    <origin
+      xyz="0.17263668098028 0.106171705400847 -0.00173226325399095"
+      rpy="3.14159265358979 -1.54598030035848 3.14159265358979" />
+    <parent
+      link="Chassis" />
+    <child
+      link="FrontCastor" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="FrontCastorWheel">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 2.7756E-17 -6.9389E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.031765" />
+      <inertia
+        ixx="3.915E-06"
+        ixy="4.2352E-22"
+        ixz="4.8231E-21"
+        iyy="3.915E-06"
+        iyz="-3.9054E-21"
+        izz="7.4011E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/FrontCastorWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.09019 0.24705 0.37254 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/FrontCastorWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="FrontCastorWheelRevolute"
+    type="continuous">
+    <origin
+      xyz="0.0320000000000025 0.0674999999999988 0"
+      rpy="0 0 -2.72865613261179" />
+    <parent
+      link="FrontCastor" />
+    <child
+      link="FrontCastorWheel" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="RearCastor">
+    <inertial>
+      <origin
+        xyz="0.0030314 0.034563 2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.067153" />
+      <inertia
+        ixx="4.4926E-05"
+        ixy="-6.705E-06"
+        ixz="2.8327E-21"
+        iyy="9.6191E-06"
+        iyz="-5.914E-21"
+        izz="4.9799E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/RearCastor.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.23529 0.68235 0.63921 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/RearCastor.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RearCastorRevolute"
+    type="continuous">
+    <origin
+      xyz="-0.265612518275258 0.106171705400852 -0.00173226325399275"
+      rpy="3.14159265358978 0.863215800991521 -3.14159265358979" />
+    <parent
+      link="Chassis" />
+    <child
+      link="RearCastor" />
+    <axis
+      xyz="0 1 0" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+  <link
+    name="RearCastorWheel">
+    <inertial>
+      <origin
+        xyz="0 -2.7756E-17 -1.3878E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.031765" />
+      <inertia
+        ixx="3.915E-06"
+        ixy="1.0588E-22"
+        ixz="2.5401E-21"
+        iyy="3.915E-06"
+        iyz="7.4701E-22"
+        izz="7.4011E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/RearCastorWheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.09019 0.24705 0.37254 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://GazeboV0/meshes/RearCastorWheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RearCastorWheelRevolute"
+    type="continuous">
+    <origin
+      xyz="0.032 0.0675 0"
+      rpy="0 0 1.2997" />
+    <parent
+      link="RearCastor" />
+    <child
+      link="RearCastorWheel" />
+    <axis
+      xyz="0 0 1" />
+    <dynamics
+      damping="0"
+      friction="0" />
+  </joint>
+</robot>
