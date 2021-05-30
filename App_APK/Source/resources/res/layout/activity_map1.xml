@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@drawable/image" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="20dp" android:textStyle="bold" android:textColor="@android:color/background_light" android:layout_gravity="center" android:id="@+id/tv_coordinates" android:padding="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/coordinates" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"/>
+    <org.ros.android.android_tutorial_cv_bridge.PaintView android:layout_gravity="center" android:id="@+id/paint_view" android:background="@drawable/map" android:layout_width="300dp" android:layout_height="300dp" android:layout_below="@+id/tv_coordinates"/>
+    <View android:id="@+id/view" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_weight="5"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="20dp" android:textStyle="bold" android:textColor="@android:color/background_light" android:id="@+id/ok" android:background="@drawable/bg_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Save Point" android:onClick="ok" style="@style/Widget.Button"/>
+        <Button android:textSize="20dp" android:textStyle="bold" android:textColor="@android:color/background_light" android:id="@+id/back_map" android:background="@drawable/bg_back" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Back" android:onClick="back_map" style="@style/Widget.Button"/>
+        <Button android:id="@+id/area1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="area1" android:onClick="area1"/>
+        <Button android:id="@+id/area2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="area2" android:onClick="area2"/>
+    </LinearLayout>
+    <View android:id="@+id/view2" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_weight="5"/>
+</LinearLayout>

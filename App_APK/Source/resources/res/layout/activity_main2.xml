@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/main_view" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/top_view" android:background="#ff404040" android:layout_width="match_parent" android:layout_height="50dp">
+        <Button android:id="@+id/back_button" android:layout_width="wrap_content" android:layout_height="50dp" android:text="Back" android:onClick="back"/>
+        <LinearLayout android:gravity="right" android:orientation="horizontal" android:id="@+id/top_bar" android:background="#ff404040" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/main_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/side_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <org.ros.android.view.VirtualJoystickView android:layout_gravity="center" android:id="@+id/virtual_joystick" android:layout_width="wrap_content" android:layout_height="0dp" android:adjustViewBounds="true" android:layout_weight="4"/>
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

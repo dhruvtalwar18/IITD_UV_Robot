@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/padded">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="18dp" android:id="@+id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uri_text" android:layout_weight="1"/>
+        <AutoCompleteTextView android:id="@+id/master_chooser_uri" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/master_uri_hint" android:singleLine="true" android:layout_weight="20">
+            <requestFocus/>
+        </AutoCompleteTextView>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" style="@style/padded">
+        <Button android:id="@+id/master_chooser_qr_code_button" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/qr_code" android:layout_weight="1" android:onClick="qrCodeButtonClicked"/>
+        <Button android:enabled="false" android:id="@+id/master_chooser_ok" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/use_master" android:layout_weight="1" android:onClick="okButtonClicked"/>
+    </LinearLayout>
+    <CheckBox android:id="@+id/advanced_checkBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="false" android:text="@string/show_advanced" android:onClick="advancedCheckboxClicked" style="@style/padded"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/advancedOptions" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textAppearance="?android:attr/textAppearanceMedium" android:layout_gravity="center" android:id="@+id/interfaceLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_interface" android:autoText="true"/>
+        <ListView android:id="@+id/networkInterfaces" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button android:id="@+id/master_chooser_new_master_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/new_master" android:layout_weight="1" android:onClick="newMasterButtonClicked"/>
+            <Button android:id="@+id/master_chooser_new_private_master_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/new_private_master" android:layout_weight="1" android:onClick="newPrivateMasterButtonClicked"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:layout_gravity="bottom" android:id="@+id/master_chooser_cancel" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:onClick="cancelButtonClicked" style="@style/padded"/>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/connection_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" style="@style/padded">
+        <ProgressBar android:id="@+id/connection_spinner" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:textSize="18sp" android:id="@+id/connection_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/connection_text"/>
+    </LinearLayout>
+</LinearLayout>

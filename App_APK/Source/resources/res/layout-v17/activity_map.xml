@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/linearlayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+        <ImageView android:id="@+id/imageView" android:background="@drawable/map" android:layout_width="300dp" android:layout_height="400dp" android:layout_marginLeft="47dp" android:layout_marginTop="10dp" android:src="@drawable/map" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_marginStart="47dp" android:layout_alignParentStart="true"/>
+    </LinearLayout>
+    <Button android:id="@+id/ok" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ok" android:onClick="ok"/>
+    <Button android:id="@+id/back_map" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="back" android:onClick="back_map"/>
+</LinearLayout>

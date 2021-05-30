@@ -1,0 +1,40 @@
+package org.jboss.netty.handler.codec.embedder;
+
+import java.net.SocketAddress;
+import org.jboss.netty.channel.AbstractChannel;
+import org.jboss.netty.channel.Channel;
+import org.jboss.netty.channel.ChannelConfig;
+import org.jboss.netty.channel.ChannelPipeline;
+import org.jboss.netty.channel.ChannelSink;
+import org.jboss.netty.channel.DefaultChannelConfig;
+
+class EmbeddedChannel extends AbstractChannel {
+    private static final Integer DUMMY_ID = 0;
+    private final ChannelConfig config = new DefaultChannelConfig();
+    private final SocketAddress localAddress = new EmbeddedSocketAddress();
+    private final SocketAddress remoteAddress = new EmbeddedSocketAddress();
+
+    EmbeddedChannel(ChannelPipeline pipeline, ChannelSink sink) {
+        super(DUMMY_ID, (Channel) null, EmbeddedChannelFactory.INSTANCE, pipeline, sink);
+    }
+
+    public ChannelConfig getConfig() {
+        return this.config;
+    }
+
+    public SocketAddress getLocalAddress() {
+        return this.localAddress;
+    }
+
+    public SocketAddress getRemoteAddress() {
+        return this.remoteAddress;
+    }
+
+    public boolean isBound() {
+        return true;
+    }
+
+    public boolean isConnected() {
+        return true;
+    }
+}

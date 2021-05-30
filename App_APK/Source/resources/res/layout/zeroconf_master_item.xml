@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:padding="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6dp" android:src="@drawable/ros_master" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+    <TextView android:id="@+id/service_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="My Application" android:layout_toRightOf="@+id/icon" style="@style/TextAppearance.Medium"/>
+    <CheckedTextView android:textAppearance="?android:attr/textAppearanceLarge" android:ellipsize="marquee" android:id="@+id/service_detail" android:layout_width="match_parent" android:layout_height="?android:attr/listPreferredItemHeight" android:layout_marginLeft="15dp" android:checkMark="?android:attr/listChoiceIndicatorMultiple" android:text="Simple application that\10 shows how to\10 use RelativeLayout" android:layout_toRightOf="@+id/icon" android:layout_below="@+id/service_name" style="@style/TextAppearance.Small"/>
+</RelativeLayout>

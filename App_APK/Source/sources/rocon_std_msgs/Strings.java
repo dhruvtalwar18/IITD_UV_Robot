@@ -1,0 +1,53 @@
+package rocon_std_msgs;
+
+import org.ros.internal.message.Message;
+
+public interface Strings extends Message {
+    public static final String APPLICATION_FRAMEWORK_GROOVY = "groovy";
+    public static final String APPLICATION_FRAMEWORK_HYDRO = "hydro";
+    public static final String APPLICATION_FRAMEWORK_INDIGO = "indigo";
+    public static final String APPLICATION_FRAMEWORK_OPROS = "opros";
+    public static final String APPLICATION_FRAMEWORK_OTHER = "application_framework_other";
+    public static final String APPLICATION_FRAMEWORK_ROS_OTHER = "ros_other";
+    public static final String HW_GALAXY = "galaxy";
+    public static final String HW_MEGA = "mega";
+    public static final String HW_NOTE10 = "note10";
+    public static final String HW_NOTE3 = "note3";
+    public static final String HW_PC = "pc";
+    public static final String HW_PHONE_OTHER = "phone_other";
+    public static final String HW_PR2 = "pr2";
+    public static final String HW_ROBOT_OTHER = "robot_other";
+    public static final String HW_TABLET_OTHER = "tablet_other";
+    public static final String HW_TURTLEBOT2 = "turtlebot2";
+    public static final String HW_WAITERBOT = "waiterbot";
+    public static final String HW_XOOM = "xoom";
+    public static final String OS_ARCH = "arch";
+    public static final String OS_CHROME = "chrome";
+    public static final String OS_DEBIAN = "debian";
+    public static final String OS_FEDORA = "fedora";
+    public static final String OS_FIREFOX = "firefox";
+    public static final String OS_FREEBSD = "freebsd";
+    public static final String OS_GENTOO = "gentoo";
+    public static final String OS_HONEYCOMB = "honeycomb";
+    public static final String OS_ICE_CREAM_SANDWICH = "ice_cream_sandwich";
+    public static final String OS_INTERNET_EXPLORER = "internet_explorer";
+    public static final String OS_JELLYBEAN = "jellybean";
+    public static final String OS_KITKAT = "kitkat";
+    public static final String OS_OPERA = "opera";
+    public static final String OS_OSX = "osx";
+    public static final String OS_PRECISE = "precise";
+    public static final String OS_QUANTAL = "quantal";
+    public static final String OS_RARING = "raring";
+    public static final String OS_SAFARI = "safari";
+    public static final String OS_SAUCY = "saucy";
+    public static final String OS_WINDOWS7 = "windows7";
+    public static final String OS_WINXP = "winxp";
+    public static final String ROCON_VERSION = "acdc";
+    public static final String TAG_GAZEBO_ROBOT_TYPE = "concert_gazebo";
+    public static final String TAG_RAPP = "rocon_app";
+    public static final String TAG_SERVICE = "concert_service";
+    public static final String TAG_SOFTWARE = "software_farm";
+    public static final String URI_WILDCARD = "*";
+    public static final String _DEFINITION = "# Strings used in the rocon framework.\n\n################################ Versions ####################################\n\n# Rocon versions come from the names of classical composers.\n#\n# ACDC - http://en.wikipedia.org/?title=AC/DC\n#     Australian, awesome and on a highway to hell.\n\nstring ROCON_VERSION=acdc\n\n######################## Rocon URIS ###########################################\n\n# These are a convenience to help avoid typos and make easy lookups whatever\n# language you are in. The real deal is in rocon_uri/yaml/rules.yaml - make\n# sure these stay up to date with respect to each other (TODO: perhaps an\n# autogenerator of this msg file?).\n\n###### GENERAL IDENTIFIERS ######\n\nstring URI_WILDCARD=*\n\n###### HARDWARE_PLATFORMS ######\nstring HW_PC=pc\nstring HW_TURTLEBOT2=turtlebot2\nstring HW_PR2=pr2\nstring HW_WAITERBOT=waiterbot\nstring HW_ROBOT_OTHER=robot_other\n# Phones\nstring HW_GALAXY=galaxy\nstring HW_MEGA=mega\nstring HW_NOTE3=note3\nstring HW_PHONE_OTHER=phone_other\n# Tablets\nstring HW_XOOM=xoom\nstring HW_NOTE10=note10\nstring HW_TABLET_OTHER=tablet_other\n\n###### APPLICATION_FRAMEWORKS ######\nstring APPLICATION_FRAMEWORK_OTHER=application_framework_other\nstring APPLICATION_FRAMEWORK_OPROS=opros\n# Ros\nstring APPLICATION_FRAMEWORK_GROOVY=groovy\nstring APPLICATION_FRAMEWORK_HYDRO=hydro\nstring APPLICATION_FRAMEWORK_INDIGO=indigo\nstring APPLICATION_FRAMEWORK_ROS_OTHER=ros_other\n\n###### OPERATING SYSTEMS ######\nstring OS_OSX=osx\nstring OS_FREEBSD=freebsd\n# Windows\nstring OS_WINXP=winxp\nstring OS_WINDOWS7=windows7\n# linux\nstring OS_ARCH=arch\nstring OS_DEBIAN=debian\nstring OS_FEDORA=fedora\nstring OS_GENTOO=gentoo\n# linux/ubuntu \nstring OS_PRECISE=precise\nstring OS_QUANTAL=quantal\nstring OS_RARING=raring\nstring OS_SAUCY=saucy\n# Android\nstring OS_HONEYCOMB=honeycomb\nstring OS_ICE_CREAM_SANDWICH=ice_cream_sandwich\nstring OS_JELLYBEAN=jellybean\nstring OS_KITKAT=kitkat\n# Web\nstring OS_CHROME=chrome\nstring OS_FIREFOX=firefox\nstring OS_INTERNET_EXPLORER=internet_explorer\nstring OS_SAFARI=safari\nstring OS_OPERA=opera\n\n######################## Rocon Export Tags################################\n\n# Package exports used in concert_service_manager and rocon_app_utilities\nstring TAG_SERVICE=concert_service\nstring TAG_RAPP=rocon_app\nstring TAG_GAZEBO_ROBOT_TYPE=concert_gazebo\nstring TAG_SOFTWARE=software_farm\n";
+    public static final String _TYPE = "rocon_std_msgs/Strings";
+}
