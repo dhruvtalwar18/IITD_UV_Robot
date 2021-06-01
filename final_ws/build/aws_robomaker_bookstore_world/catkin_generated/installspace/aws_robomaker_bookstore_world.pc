@@ -1,0 +1,8 @@
+prefix=/home/dhruv/final_ws/install
+
+Name: aws_robomaker_bookstore_world
+Description: Description of aws_robomaker_bookstore_world
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

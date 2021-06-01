@@ -1,0 +1,8 @@
+prefix=/home/dhruv/final_ws/devel
+
+Name: teraranger_array_converter
+Description: Description of teraranger_array_converter
+Version: 1.1.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

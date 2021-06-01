@@ -1,0 +1,8 @@
+prefix=/home/dhruv/final_ws/install
+
+Name: teraranger_array
+Description: Description of teraranger_array
+Version: 2.0.0
+Cflags: -I${prefix}/include -I/usr/include
+Libs: -L${prefix}/lib /usr/lib/x86_64-linux-gnu/libboost_system.so /usr/lib/x86_64-linux-gnu/libboost_thread.so /usr/lib/x86_64-linux-gnu/libboost_chrono.so /usr/lib/x86_64-linux-gnu/libboost_date_time.so /usr/lib/x86_64-linux-gnu/libboost_atomic.so /usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: roscpp sensor_msgs std_msgs message_runtime dynamic_reconfigure serial geometry_msgs

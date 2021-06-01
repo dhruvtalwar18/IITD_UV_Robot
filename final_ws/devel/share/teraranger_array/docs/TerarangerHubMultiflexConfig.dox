@@ -1,0 +1,13 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Sensor_0" : \b [bool] Activate sensor min: False, default: True, max: True
+- \b "~Sensor_1" : \b [bool] Activate sensor min: False, default: True, max: True
+- \b "~Sensor_2" : \b [bool] Activate sensor min: False, default: True, max: True
+- \b "~Sensor_3" : \b [bool] Activate sensor min: False, default: True, max: True
+- \b "~Sensor_4" : \b [bool] Activate sensor min: False, default: True, max: True
+- \b "~Sensor_5" : \b [bool] Activate sensor min: False, default: True, max: True
+- \b "~Sensor_6" : \b [bool] Activate sensor min: False, default: True, max: True
+- \b "~Sensor_7" : \b [bool] Activate sensor min: False, default: True, max: True
+

@@ -1,0 +1,17 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~Output_Mode" : \b [int] Set the output mode min: 0, default: 0, max: 1
+- \b "~Rate" : \b [int] Set the rate min: 0, default: 0, max: 5
+- \b "~IMU_mode" : \b [int] Set imu mode min: 0, default: 0, max: 3
+- \b "~Sequence_mode" : \b [int] Set the firing sequence min: 0, default: 0, max: 2
+- \b "~Sensor_type_port_0" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+- \b "~Sensor_type_port_1" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+- \b "~Sensor_type_port_2" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+- \b "~Sensor_type_port_3" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+- \b "~Sensor_type_port_4" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+- \b "~Sensor_type_port_5" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+- \b "~Sensor_type_port_6" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+- \b "~Sensor_type_port_7" : \b [int] Set the sensor type min: 0, default: 1, max: 3
+

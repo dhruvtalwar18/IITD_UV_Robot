@@ -1,0 +1,8 @@
+prefix=/home/dhruv/final_ws/devel
+
+Name: GazeboV0
+Description: Description of GazeboV0
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

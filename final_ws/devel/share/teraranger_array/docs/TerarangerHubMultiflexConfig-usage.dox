@@ -1,0 +1,14 @@
+\subsubsection usage Usage
+\verbatim
+<node name="teraranger_mutliflex_cfg" pkg="teraranger_mutliflex_cfg" type="teraranger_mutliflex_cfg">
+  <param name="Sensor_0" type="bool" value="True" />
+  <param name="Sensor_1" type="bool" value="True" />
+  <param name="Sensor_2" type="bool" value="True" />
+  <param name="Sensor_3" type="bool" value="True" />
+  <param name="Sensor_4" type="bool" value="True" />
+  <param name="Sensor_5" type="bool" value="True" />
+  <param name="Sensor_6" type="bool" value="True" />
+  <param name="Sensor_7" type="bool" value="True" />
+</node>
+\endverbatim
+
