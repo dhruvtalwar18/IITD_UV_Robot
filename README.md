@@ -23,5 +23,15 @@ To control the robot we used a self developed android application using which we
 <p align="center">Fig.1 Movement of the bot using the app</p>
 
 
+The robot connects to the android application easily via WiFi. Within the application, the user can personalise the robot by giving it a name as well as interact with it. There are three main windows within the application – The manual mode, autonomous mode and the creation of missions mode.
+
+Apart from this, the app shall be used to keep track off the on/off cycles of the UV light as well as the amount of hours they have been switched on for.
+
+<h1><b> Robot Application</b></h1>
+
+An Android app was created for the easy use and control of the robot. The robot connects to the android application easily via WiFi. Within the application, the user can personalise the robot by giving it a name as well as interact with it. There are three main windows within the application – The manual mode, autonomous mode and the creation of missions mode. Apart from this, the app shall be used to keep track off the on/off cycles of the UV light as well as the amount of hours they have been switched on for.
+
+
+
 
 
