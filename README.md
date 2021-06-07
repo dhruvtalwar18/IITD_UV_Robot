@@ -87,7 +87,7 @@ $ rosrun map_server map_saver -f ~/uvbot_ws/src/uvbot_navigation
 <p align="center">Fig.5 Mapping Simulation</p> <br><br>
 
 
-<h1><b> Full Capability implementation </b></h1>
+<h1><b> Full Features implementation </b></h1>
 
 Once the map is made and is saved we can now launch the following along with the ones already running mentioned in the app section.
 
