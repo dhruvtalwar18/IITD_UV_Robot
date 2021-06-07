@@ -53,7 +53,7 @@ The above will get the sanitization status(UV on or off, % completed), battery %
 
 The Apk file of the application along with the souce code is attached in the App_APK folder of the repo. <br><br>
 
-<p><img align ="left" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_2.PNG" title="Result 2" width = "500"  ><img align ="right" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_3.PNG" title="Result 3" width = "300" height = "350" ></p><br><br><br><br><br><br><br><br>
+<p><img align ="left" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_2.PNG" title="Result 2" width = "475"  ><img align ="right" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_3.PNG" title="Result 3" width = "300" height = "350" ></p><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
 <p align="center">Fig. Manual Mode and Create mission mode respectively</p><br>
 <br>
