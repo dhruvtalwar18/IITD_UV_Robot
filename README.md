@@ -115,5 +115,6 @@ The whole control achitecture of the UV bot can be seen as shown in Fig. 8
 
 <h1><b> Further Notes</b></h1>
 
-The CAD design of the complete robot can be seen in the presentation and images uploaded
-The UV-C dose is calculated from the document given to us by Micron Tech, further simulations were done by our team around this
+The CAD design of the complete robot can be seen in the presentation and images uploaded.\
+The UV-C dose is calculated from the document given to us by Micron Tech, further simulations were done by our team around this, the results can be seen in the UV folder uploaded.\
+The functioning of the human detection PIR can be seen in the Images folder
