@@ -111,6 +111,12 @@ The whole control achitecture of the UV bot can be seen as shown in Fig. 8
 <p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/Hardware%20system%20structure%20and%20diagram%20of%20mobile%20robot.PNG" width = "600" height = "650" title="Control Architecture"></p>
 <p align="center">Fig.8 Control Architecture</p> <br><br>
 
+<h1><b> Future Scope</b></h1>
+
+Now that the simulation is complete we will now start to build the actual robot, the codes used in the simulation will also have to be cleaned and be edited accordingly
+We have manufactured the robot and have run manual control on the bot.
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Real_bot/Test_1.mp4" title="Emergency Stop"></p>
+<p align="center">Fig.7 Emergency Stop</p> <br><br>
 
 
 <h1><b> Further Notes</b></h1>
