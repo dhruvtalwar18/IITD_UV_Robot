@@ -6,7 +6,7 @@ Repository for the development of a UV robot capable of disinfecting indoor envi
 The UVBot is a ROS operated robot created to disinfect spaces such as schools, offices, and hospitals to inactivate COVID-19 with UV-C light. The robot can be controlled over Wi-fi using an android app, and the status of disinfection, battery level is displayed on it. It has many safety features such as emergency stop buttons, UV light control, PIR human detection sensors and voice commands to protect humans from UV exposure. Also using the strategically placed 8 IR sensors and 2D lidar, the robot is able to avoid any obstacle acorss its height. 
 The UV robot disinfects the indoor environment autonomously, after building a 2D map using a fusion of IR-TOF and 2D lidar sensors, and using the ROS navigation package it achieves so. 
 
-<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Final_Simulation.gif" title="Result 1"></p>
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Final_Simulation.gif" title="Final Simulation of the UV-Bot"></p>
 <p align="center">Fig.1 Final Simulation of the UV-Bot</p>
 
 
@@ -19,7 +19,7 @@ After developing the full 3D model the robot(after selecting all the components 
 Once the robot was simulated, gazebo sensor and differential drive plugins were added to the robot. We used Rplidar A3 and 8 Terabee TOF sensors along with a raspi camera.
 To control the robot we used a self developed android application using which we could give teleop commands to the bot
 
-<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/App_movement_1.gif" title="Result 2"></p>
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/App_movement_1.gif" title="Movement of the bot using the app"></p>
 <p align="center">Fig.2 Movement of the bot using the app</p>
 
 
@@ -42,10 +42,8 @@ $ python video.py    # It streams the live video from the camera sensor to the a
 
 For the other modes run
 
-$ python status.py
-
-$ python battery.py
-
+$ python status.py\
+$ python battery.py\
 $ python coordinates_multiple_final.py
 
 
@@ -53,13 +51,13 @@ The above will get the sanitization status(UV on or off, % completed), battery %
 
 The Apk file of the application along with the souce code is attached in the App_APK folder of the repo. <br><br>
 
-<p><img align ="left" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_2.PNG" title="Result 2" width = "475"  ><img align ="right" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_3.PNG" title="Result 3" width = "300" height = "350" ></p><br><br><br><br><br><br><br><br>
+<p><img align ="left" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_2.PNG" title="Manual Mode" width = "475"  ><img align ="right" src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_3.PNG" title="Create mission mode" width = "300" height = "350" ></p><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
-<p align="center">Fig. Manual Mode and Create mission mode respectively</p><br>
+<p align="center">Fig.3 Manual Mode and Create mission mode respectively</p><br>
 <br>
 
-<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_4.PNG" title="Result 3"></p>
-<p align="center">Fig.6 Autonomous Mode</p> <br><br>
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/app_4.PNG" title="Autonomous Mode"></p>
+<p align="center">Fig.4 Autonomous Mode</p> <br><br>
 
 
 <h1><b> Mapping Simulations</b></h1>
@@ -74,10 +72,8 @@ $ python Laser_IR_fuse.py
 
 Now we can run the package and start the mapping process
 
-$ roslaunch uvbot_gazebo uvbot_world.launch
-
-$ roslaunch uvbot_navigation gmapping_demo.launch
-
+$ roslaunch uvbot_gazebo uvbot_world.launch\
+$ roslaunch uvbot_navigation gmapping_demo.launch\
 $ roslaunch uvbot_description uvbot_rviz_gmapping.launch
 
 Now we can move the robot around the environement to make an occupancy grid of the environment.
@@ -87,12 +83,38 @@ Once we are happy with the map that can we seen on the rviz simulation we can sa
 $ rosrun map_server map_saver -f ~/uvbot_ws/src/uvbot_navigation
 
 
-<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Mapping_final.gif" title="Result 3"></p>
-<p align="center">Fig. Mapping Simulation</p> <br><br>
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Mapping_final.gif" title=" Mapping Simulation"></p>
+<p align="center">Fig.5 Mapping Simulation</p> <br><br>
+
+
+<h1><b> Full Capability implementation </b></h1>
+
+Once the map is made and is saved we can now launch the following along with the ones already running mentioned in the app section.
+
+$ roslaunch uvbot_gazebo  uvbot_world.launch\
+$ roslaunch uvbot_navigation amcl_demo.launch map_file:=<file path/map.yaml>\
+$ roslaunch uvbot_description uvbot_rviz_amcl.launch\
+$ python coordinates_multiple_final.py
+
+Now we can select the points to be sanitised and the robot shall traverse there stop for a preset time(calculted from UV irradation exposure) and then go to the other selected points.
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Final_Simulation.gif" title="Final Simulation Demo"></p>
+<p align="center">Fig.6 Final Simulation Demo</p> <br><br>
+
+We can also see the outcome of the emergency stop button, once pressed the robot shall stop at that moment only, and once the issue is resolved if pressed again the robot shall continue its journey from that point itself, no need for full resetting the bot. 
+
+
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Emergency_Stop_button.gif" title="Emergency Stop"></p>
+<p align="center">Fig.7 Emergency Stop</p> <br><br>
+
+The whole control achitecture of the UV bot can be seen as shown in Fig. 8
+
+<p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/Images/Hardware%20system%20structure%20and%20diagram%20of%20mobile%20robot.PNG" width = "600" height = "650" title="Control Architecture"></p>
+<p align="center">Fig.8 Control Architecture</p> <br><br>
 
 
 
+<h1><b> Further Notes</b></h1>
 
-
-
-
+The CAD design of the complete robot can be seen in the presentation and images uploaded.\
+The UV-C dose is calculated from the document given to us by Micron Tech, further simulations were done by our team around this, the results can be seen in the UV folder uploaded.\
+The functioning of the human detection PIR can be seen in the Images folder
