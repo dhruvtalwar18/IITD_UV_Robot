@@ -36,16 +36,19 @@ The following scripts need to be run to use all the features in the app:-
 
 Connect the app to the ROS master URL.(They should be over the same network)
 
+```
 $ python throttle.py # This connects the joystick in the app to the cmd_vel topic of the simulation
+```
 
+```
 $ python video.py    # It streams the live video from the camera sensor to the app screen
-
+```
 For the other modes run
-
+```
 $ python status.py\
 $ python battery.py\
 $ python coordinates_multiple_final.py
-
+```
 
 The above will get the sanitization status(UV on or off, % completed), battery % and a script to send the coordinates marked on the map to the move_base of the simulated robot
 
@@ -64,24 +67,26 @@ The Apk file of the application along with the souce code is attached in the App
 
 Before the mapping and navigation simulations are run a few scripts need to be run. Because of the lidar positioning, the rays collide with the robot structure and thus those array of rays need to be deleted before mappping is used. 
 
+```
 $ python Laser_robo_obstruction_Laser_new.py
+```
 
 Once the new laser scan is published it should then be fused with the IR sensors data so that incase there is an obstacle which is below the plane of the 2D lidar the robot can still detect it, as there are multiple terabee sensors along the length of the robot with FOV 20 deg. To fuse the data run the following script
-
+```
 $ python Laser_IR_fuse.py
-
+```
 Now we can run the package and start the mapping process
-
+```
 $ roslaunch uvbot_gazebo uvbot_world.launch\
 $ roslaunch uvbot_navigation gmapping_demo.launch\
 $ roslaunch uvbot_description uvbot_rviz_gmapping.launch
-
+```
 Now we can move the robot around the environement to make an occupancy grid of the environment.
 
 Once we are happy with the map that can we seen on the rviz simulation we can save the map using
-
+```
 $ rosrun map_server map_saver -f ~/uvbot_ws/src/uvbot_navigation
-
+```
 
 <p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Mapping_final.gif" title=" Mapping Simulation"></p>
 <p align="center">Fig.5 Mapping Simulation</p> <br><br>
@@ -90,12 +95,12 @@ $ rosrun map_server map_saver -f ~/uvbot_ws/src/uvbot_navigation
 <h1><b> Full Features implementation </b></h1>
 
 Once the map is made and is saved we can now launch the following along with the ones already running mentioned in the app section.
-
+```
 $ roslaunch uvbot_gazebo  uvbot_world.launch\
 $ roslaunch uvbot_navigation amcl_demo.launch map_file:=<file path/map.yaml>\
 $ roslaunch uvbot_description uvbot_rviz_amcl.launch\
 $ python coordinates_multiple_final.py
-
+```
 Now we can select the points to be sanitised and the robot shall traverse there stop for a preset time(calculted from UV irradation exposure) and then go to the other selected points.
 <p align="center"><img src="https://github.com/dhruvtalwar18/IITD_UV_Robot/blob/main/GIFs/Final_Simulation.gif" title="Final Simulation Demo"></p>
 <p align="center">Fig.6 Final Simulation Demo</p> <br><br>
